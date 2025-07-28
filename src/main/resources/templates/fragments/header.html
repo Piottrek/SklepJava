@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header th:fragment="ShopHeader">
+    <span class="title">Koteczki</span>
+
+    <a th:href="@{/order/cart}" class="cart-ico">
+        <div>
+            <span>Koszyk(</span>
+            <span th:text="${@cart.counter}"></span>
+            <span>)</span>
+            <span th:text="${@cart.sum}"></span>
+            <span>zł</span>
+        </div>
+    </a>
+</header>
+</body>
+</html>

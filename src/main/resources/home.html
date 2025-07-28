@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MyShop</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+    <span class="title">MyShop</span>
+</header>
+
+<div class="main-content">
+    <div class="item" th:each="item : ${items}">
+        <p class="item-name" th:text="${item.name}">Nazwa</p>
+
+        <!-- Obrazek -->
+        <img th:src="${item.imgURL}" alt="obrazek">
+
+        <div>
+            <span>Opis: </span>
+            <span th:text="${item.description}">Opis</span>
+        </div>
+
+        <div>
+            <span>Cena: </span>
+            <span th:text="${item.price}">0.00</span>
+            <span>zł</span>
+        </div>
+
+        <a href="#" class="add-btn">Dodaj do koszyka</a>
+    </div>
+</div>
+
+</body>
+</html>

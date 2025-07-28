@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodaj produkt</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+    <span class="title">MyShop</span>
+    <a href="/" class="cart-ico">
+        <div>
+            <span>Powrót</span>
+        </div>
+    </a>
+</header>
+
+<div class="main-content">
+    <form th:action="@{/admin/add}" method="post">
+        <h2>Dodaj produkt</h2>
+
+        <label>
+            Nazwa:
+            <input type="text" name="name" required>
+        </label><br><br>
+
+        <label>
+            Cena:
+            <input type="number" name="price" step="0.01" required>
+        </label><br><br>
+
+        <label>
+            URL obrazka:
+            <input type="text" name="imgURL" required>
+        </label><br><br>
+
+        <button type="submit" class="add-btn">Dodaj</
